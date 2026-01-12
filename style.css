@@ -74,7 +74,7 @@ a {
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: min(1080px, calc(100% - 32px));
+  width: min(960px, calc(100% - 32px));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -122,6 +122,10 @@ a {
 
 .nav-social .social-ig {
   color: var(--accent-red);
+}
+
+.nav-social .social-yt {
+  color: var(--accent-yellow);
 }
 
 .nav-social .social-bc {
@@ -188,7 +192,7 @@ a {
 }
 
 .hero-content {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 40px auto 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -308,7 +312,7 @@ a {
 
 
 .section-inner {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
   display: grid;
   gap: 32px;
@@ -326,6 +330,34 @@ a {
   width: auto;
   max-width: 220px;
   margin: 0 0 8px;
+}
+
+.music-panels {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.music-panel {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: rgba(20, 20, 20, 0.75);
+  border: 1px solid rgba(245, 242, 236, 0.08);
+}
+
+.music-panel h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.music-panel p {
+  margin: 0;
+  color: rgba(245, 242, 236, 0.7);
 }
 
 .simple-list {
@@ -352,6 +384,18 @@ a {
   display: flex;
   justify-content: flex-start;
   width: 100%;
+}
+
+.embed-wrap.video {
+  align-items: center;
+}
+
+.youtube-embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: #000;
 }
 
 .bandcamp-embed {
@@ -452,6 +496,10 @@ footer .panel-title {
   }
 
   .contact .section-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .music-panels {
     grid-template-columns: 1fr;
   }
 }
