@@ -1,0 +1,19 @@
+name: Verify Pages Config
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify-cname:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Ensure CNAME exists
+        run: |
+          if [ ! -s CNAME ]; then
+            echo "CNAME file is missing or empty."
+            exit 1
+          fi
